@@ -11,10 +11,10 @@ import {
 import {
   Delete as DeleteIcon,
   CropDin,
-  DoneOutline,
+  Done,
 } from '@material-ui/icons'
 
-export default ({ id, title, description }) => {
+export default ({ id, title, description, done }) => {
   return (
     <Card key={id} style={{
       marginBottom: '2vh',
@@ -37,12 +37,17 @@ export default ({ id, title, description }) => {
           <IconButton edge="end" aria-label="delete">
             <DeleteIcon />
           </IconButton>
+
+          {!done ?
           <IconButton edge="end" aria-label="todo">
             <CropDin />
-          </IconButton>
+          </IconButton> :
           <IconButton edge="end" aria-label="done">
-            <DoneOutline />
-          </IconButton>
+            <Done style={{
+              color: 'green',
+            }} />
+          </IconButton>}
+
         </ListItemSecondaryAction>
       </ListItem>
     </Card>
