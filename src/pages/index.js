@@ -1,18 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
-import Button from '@material-ui/core/Button'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TodoList from '../components/TodoList'
+import AddTodoButton from '../components/AddTodoButton'
+
+const todos = [
+  { title: 'todo 1', done: false },
+  { title: 'todo 2', description: 'this is a sample description', done: false },
+  { title: 'todo 3', done: false },
+  { title: 'todo 4', done: true },
+  { title: 'todo 5', done: false },
+]
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hello World!</h1>
-    <Button variant="contained" color="primary">
-      Press me
-    </Button>
-    <Link to="/page-2/">Go to page 2</Link>
+    <TodoList todos={todos} />
+    <AddTodoButton to="/page-2" />
   </Layout>
 )
 
