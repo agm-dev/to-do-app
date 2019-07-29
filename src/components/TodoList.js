@@ -4,6 +4,7 @@ import TodoListItem from './TodoListItem'
 
 export default ({ todos }) => {
   return (
+    <>
     <List>
       {todos.map(todo => (
         <TodoListItem
@@ -15,5 +16,7 @@ export default ({ todos }) => {
         </TodoListItem>
       ))}
     </List>
+    <div className="breakline" />
+    </>
   )
 }
