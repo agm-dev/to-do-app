@@ -7,6 +7,7 @@ export default ({ todos }) => {
     <List>
       {todos.map(todo => (
         <TodoListItem
+            key={todo.id}
             id={todo.id}
             title={todo.title}
             description={todo.description}

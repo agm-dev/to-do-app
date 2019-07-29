@@ -1,16 +1,24 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+} from '@material-ui/core'
+
+import Menu from './Menu'
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div>
-      <h1>
+    <AppBar position="static">
+      <Toolbar>
+        <Menu />
         <Link to="/" >
-          {siteTitle}
+          <Typography variant="h6">{siteTitle}</Typography>
         </Link>
-      </h1>
-    </div>
+      </Toolbar>
+    </AppBar>
   </header>
 )
 
