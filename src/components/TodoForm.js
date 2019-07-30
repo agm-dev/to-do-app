@@ -4,6 +4,8 @@ import { TodosContext } from '../context/TodosContext'
 import {
   TextField,
   Button,
+  Container,
+  Grid,
 } from '@material-ui/core'
 import {
   Create as CreateIcon
@@ -26,30 +28,52 @@ export default (props) => {
 
   // TODO: user material-ui form components
   return (
-    <form onSubmit={add} noValidate autoComplete="off">
-      <TextField
-        id="title"
-        label="Title"
-        value={title}
-        onChange={updateTitle}
-        margin="normal"
-        fullWidth
-      />
-      <TextField
-        id="description"
-        label="Description"
-        value={description}
-        onChange={updateDescription}
-        margin="normal"
-        fullWidth
-      />
-      <Button variant="contained" size="medium" color="primary">
-        <CreateIcon style={{
-          marginRight: '1vh',
-          fontSize: '20px',
-        }} />
-        Add
-      </Button>
+    <form noValidate autoComplete="off">
+      <Container maxWidth="md">
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <TextField
+              required
+              id="title"
+              name="title"
+              label="Title"
+              value={title}
+              onChange={updateTitle}
+              margin="normal"
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              id="description"
+              name="description"
+              label="Description"
+              value={description}
+              onChange={updateDescription}
+              margin="normal"
+              fullWidth
+            />
+          </Grid>
+        </Grid>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          marginTop: '3vh',
+        }}>
+          <Button
+            variant="contained"
+            size="medium"
+            color="primary"
+            onClick={add}
+          >
+            <CreateIcon style={{
+              marginRight: '1vh',
+              fontSize: '20px',
+            }} />
+            Add
+          </Button>
+        </div>
+      </Container>
     </form>
   )
 }
