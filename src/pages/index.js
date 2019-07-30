@@ -15,6 +15,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Typography variant="subtitle1">
+        Pending tasks ({pending.length})
+      </Typography>
       {
         pending.length ?
         <TodoList todos={pending} /> :

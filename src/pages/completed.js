@@ -14,7 +14,10 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Comleted" />
+      <Typography variant="subtitle1">
+        Completed tasks ({completed.length})
+      </Typography>
       {
         completed.length ?
         <TodoList todos={completed} /> :
