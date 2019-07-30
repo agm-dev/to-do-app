@@ -25,17 +25,16 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Grid container spacing={3}>
-      {/* Header section */}
-      <Grid item xs={12}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+    <>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <Grid container spacing={3}>
+        {/* Main content section */}
+        <Grid item xs={12}>
+          {children}
+        </Grid>
+        {/* Footer section */}
       </Grid>
-      {/* Main content section */}
-      <Grid item xs={12}>
-        {children}
-      </Grid>
-      {/* Footer section */}
-    </Grid>
+    </>
   )
 }
 

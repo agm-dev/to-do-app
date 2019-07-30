@@ -9,18 +9,33 @@ import {
 
 import Menu from './Menu'
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <AppBar position="static">
-      <Toolbar>
-        <Menu />
-        <Link to="/" >
-          <Typography variant="h6">{siteTitle}</Typography>
-        </Link>
-      </Toolbar>
-    </AppBar>
-  </header>
-)
+const Header = ({ siteTitle }) => {
+  const headerHeight = 70
+  return (
+    <>
+      <AppBar
+        position="static"
+        style={{
+          position: 'fixed',
+          width: '100vh',
+          minHeight: `${headerHeight}px`,
+          marginLeft: '-8px', // to remove margin 8px on body
+          marginTop: '-8px', // to remove margin 8px on body
+        }}
+      >
+        <Toolbar>
+          <Menu />
+          <Link to="/" >
+            <Typography variant="h6">{siteTitle}</Typography>
+          </Link>
+        </Toolbar>
+      </AppBar>
+      <div style={{
+          minHeight: `${headerHeight}px`,
+      }} />
+    </>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
