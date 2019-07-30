@@ -26,10 +26,11 @@ export default ({ todo }) => {
       marginBottom: '2vh',
       paddingTop: '1vh',
       paddingBottom: '1vh',
+      backgroundColor: '#e8eaf6',
     }}>
       <ListItem>
         <ListItemAvatar>
-          <Avatar aria-label={title}>
+          <Avatar aria-label={title} style={{ backgroundColor: '#5c6bc0' }}>
             {title[0]}
           </Avatar>
         </ListItemAvatar>
