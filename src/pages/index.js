@@ -10,13 +10,14 @@ import { Typography } from '@material-ui/core'
 const IndexPage = () => {
   const context = useContext(TodosContext)
   const { todos } = context
+  const pending = todos.filter(todo => !todo.done)
 
   return (
     <Layout>
       <SEO title="Home" />
       {
-        todos.length ?
-        <TodoList todos={todos} /> :
+        pending.length ?
+        <TodoList todos={pending} /> :
         <Typography>You are done!</Typography>
       }
       <AddTodoButton to="/add" />

@@ -26,7 +26,6 @@ export default (props) => {
     navigate('/')
   }
 
-  // TODO: user material-ui form components
   return (
     <form noValidate autoComplete="off">
       <Container maxWidth="md">

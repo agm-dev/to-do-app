@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   ListItem,
   ListItemAvatar,
@@ -13,8 +13,13 @@ import {
   CropDin,
   Done,
 } from '@material-ui/icons'
+import { TodosContext } from '../context/TodosContext'
 
 export default ({ id, title, description, done }) => {
+  const context = useContext(TodosContext)
+  const { toggleTodo } = context
+  const update = () => toggleTodo(id)
+
   return (
     <Card key={id} style={{
       marginBottom: '2vh',
@@ -39,10 +44,10 @@ export default ({ id, title, description, done }) => {
           </IconButton>
 
           {!done ?
-          <IconButton edge="end" aria-label="todo">
+          <IconButton edge="end" aria-label="todo" onClick={update}>
             <CropDin />
           </IconButton> :
-          <IconButton edge="end" aria-label="done">
+          <IconButton edge="end" aria-label="done" onClick={update}>
             <Done style={{
               color: 'green',
             }} />
