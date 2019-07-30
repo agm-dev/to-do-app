@@ -17,13 +17,13 @@ const Header = ({ siteTitle }) => {
         position="static"
         style={{
           position: 'fixed',
-          width: '100vh',
-          minHeight: `${headerHeight}px`,
           marginLeft: '-8px', // to remove margin 8px on body
           marginTop: '-8px', // to remove margin 8px on body
         }}
       >
-        <Toolbar>
+        <Toolbar style={{
+          minHeight: `${headerHeight}px`,
+        }}>
           <Menu />
           <Link to="/" >
             <Typography variant="h6">{siteTitle}</Typography>
