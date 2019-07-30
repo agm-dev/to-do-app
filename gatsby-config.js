@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `To Do App`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Just a basic and simple todo app, made with Gatsby and material-ui.`,
+    author: `@g0ldstripes`,
+    pathPrefix: `/to-do-app-site`,
   },
   plugins: [
     `gatsby-plugin-sass`,
