@@ -18,8 +18,9 @@ import { TodosContext } from '../context/TodosContext'
 export default ({ todo }) => {
   const { id, title, description, done } = todo
   const context = useContext(TodosContext)
-  const { toggleTodo } = context
+  const { toggleTodo, removeTodo } = context
   const update = () => toggleTodo(id)
+  const remove = () => removeTodo(id)
 
   return (
     <Card key={id} style={{
@@ -41,7 +42,7 @@ export default ({ todo }) => {
         />
 
         <ListItemSecondaryAction>
-          <IconButton edge="end" aria-label="delete">
+          <IconButton edge="end" aria-label="delete" onClick={remove}>
             <DeleteIcon />
           </IconButton>
 

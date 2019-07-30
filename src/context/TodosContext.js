@@ -54,6 +54,15 @@ class TodosProvider extends Component {
     }
   }
 
+  removeTodo = id => {
+    const { todos } = this.state
+    const match = todos.find(todo => todo.id === id)
+    if (match) {
+      const updatedTodos = todos.filter(todo => todo.id !== id)
+      this.setState({ todos: updatedTodos })
+    }
+  }
+
   render() {
     const { children } = this.props
     const { todos } = this.state
@@ -64,6 +73,7 @@ class TodosProvider extends Component {
           todos,
           addTodo: this.addTodo,
           toggleTodo: this.toggleTodo,
+          removeTodo: this.removeTodo,
         }}
       >
         {children}
