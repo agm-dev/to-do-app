@@ -15,7 +15,8 @@ import {
 } from '@material-ui/icons'
 import { TodosContext } from '../context/TodosContext'
 
-export default ({ id, title, description, done }) => {
+export default ({ todo }) => {
+  const { id, title, description, done } = todo
   const context = useContext(TodosContext)
   const { toggleTodo } = context
   const update = () => toggleTodo(id)

@@ -6,15 +6,7 @@ export default ({ todos }) => {
   return (
     <>
     <List>
-      {todos.map(todo => (
-        <TodoListItem
-            key={todo.id}
-            id={todo.id}
-            title={todo.title}
-            description={todo.description}
-        >
-        </TodoListItem>
-      ))}
+      {todos.map(todo => <TodoListItem key={todo.id} todo={todo} />)}
     </List>
     <div className="breakline" />
     </>
