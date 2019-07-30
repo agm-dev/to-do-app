@@ -29,7 +29,7 @@ export default () => {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon style={{ color: '#fff' }} />
       </IconButton>
       <Menu
         id="menu"
