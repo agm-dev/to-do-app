@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import TodoList from '../components/TodoList'
 import AddTodoButton from '../components/AddTodoButton'
 import { TodosContext } from '../context/TodosContext'
+import { Typography } from '@material-ui/core'
 
 const IndexPage = () => {
   const context = useContext(TodosContext)
@@ -13,8 +14,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <TodoList todos={todos} />
-      <AddTodoButton to="/page-2" />
+      {
+        todos.length ?
+        <TodoList todos={todos} /> :
+        <Typography>You are done!</Typography>
+      }
+      <AddTodoButton to="/add" />
     </Layout>
   )
 }
