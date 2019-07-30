@@ -1,14 +1,25 @@
 import React from "react"
+import { Link } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Typography, Button } from '@material-ui/core'
 
-const NotFoundPage = () => (
+
+export default () => (
   <Layout>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Typography variant="subtitle1" paragraph>
+      Are you lost?
+    </Typography>
+    <Link to="/">
+      <Button
+        variant="contained"
+        size="medium"
+        color="primary"
+      >
+        Go Home
+      </Button>
+    </Link>
   </Layout>
 )
-
-export default NotFoundPage

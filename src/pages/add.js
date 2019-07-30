@@ -6,7 +6,7 @@ import TodoForm from '../components/TodoForm'
 
 export default () => (
   <Layout>
-    <SEO title="Add todo" />
+    <SEO title="Add" />
     <TodoForm />
   </Layout>
 )

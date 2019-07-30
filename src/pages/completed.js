@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Layout>
-      <SEO title="Comleted" />
+      <SEO title="Completed" />
       <Typography variant="subtitle1">
         Completed tasks ({completed.length})
       </Typography>

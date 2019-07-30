@@ -34,7 +34,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "publish": "gh-pages --dist ./public --branch master --remote ghpages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
