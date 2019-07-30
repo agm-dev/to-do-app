@@ -1,9 +1,9 @@
 module.exports = {
+  pathPrefix: `/to-do-app-site`,
   siteMetadata: {
     title: `To Do App`,
     description: `Just a basic and simple todo app, made with Gatsby and material-ui.`,
     author: `@g0ldstripes`,
-    pathPrefix: `/to-do-app-site`,
   },
   plugins: [
     `gatsby-plugin-sass`,
