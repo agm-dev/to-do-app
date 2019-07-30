@@ -4,4 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import React from 'react'
+import { TodosProvider } from './src/context/TodosContext'
+
+export const wrapRootElement = ({ element }) => (
+  <TodosProvider>
+    {element}
+  </TodosProvider>
+)
